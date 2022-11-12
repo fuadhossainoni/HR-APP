@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>    
+        <title>User Registration Form</title>
+        <h:outputStylesheet name="/css/bootstrap.min.css"/>
+    </h:head>
+    <h:body>
+        <h:form id="form" class="form-horizontal">
+            <div class="form-group">
+                <div class="col-sm-4"></div>
+                <div  class="col-sm-4">
+                    <h2 style="text-align: center">Provide Following Details</h2>
+                </div>
+            </div>
+            <hr/>
+            <div class="form-group">
+                <h:outputLabel for="fname" class="control-label col-sm-4">First Name</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText id="fname" value="#{employee.fname}" class="form-control" validatorMessage="First name is required">
+                        <f:validateRequired />
+                    </h:inputText>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="lname" class="control-label col-sm-4">Last Name</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText id="lname" value="#{employee.lname}" class="form-control" validatorMessage="Last name is required">
+                        <f:validateRequired />
+                    </h:inputText>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="division" class="control-label col-sm-4">Division</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText id="division" value="#{employee.division}" class="form-control" validatorMessage="Division is required">
+                        <f:validateRequired/>
+                    </h:inputText>
+                </div>
+            </div>
+             <div class="form-group">
+                <h:outputLabel for="building" class="control-label col-sm-4">Building</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText id="building" value="#{employee.building}" class="form-control" validatorMessage="Building is required">
+                        <f:validateRequired/>
+                    </h:inputText>
+                </div>
+            </div>
+             <div class="form-group">
+                <h:outputLabel for="title" class="control-label col-sm-4">Title</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText id="title" value="#{employee.title}" class="form-control" validatorMessage="Title is required">
+                        <f:validateRequired/>
+                    </h:inputText>
+                </div>
+            </div>
+             <div class="form-group">
+                <h:outputLabel for="room" class="control-label col-sm-4">Room</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText id="room" value="#{employee.room}" class="form-control" validatorMessage="Room is required">
+                        <f:validateRequired/>
+                    </h:inputText>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <div class="col-sm-2">
+                        <h:commandButton value="Save" action="#{employee.save()}" class="btn btn-success" style="width: 80px;"></h:commandButton>
+                    </div>
+                    <div class="col-sm-1">
+                    </div>
+                    <div class="col-sm-2">
+                        <h:link outcome="index" value="View Employee List" class="btn btn-primary" />
+                    </div>
+                </div>
+            </div>
+        </h:form>
+    </h:body>
+</html>
